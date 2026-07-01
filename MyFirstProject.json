@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "name": "MyFirstProject",
+    "namespace": "project_main",
+    "customDatatypeNamespace": "data::team",
+    "projectDataTypes": "/Project/Main/DataTypes/",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "swcs": [
+    {
+      "id": "id_2_nj8g",
+      "name": "MyFirstApp",
+      "x": 29.888936347363938,
+      "y": 40.70474667511388,
+      "ports": [
+        {
+          "id": "id_18_k863",
+          "kind": "provided",
+          "serviceId": "id_4_20wl",
+          "instanceName": ""
+        },
+        {
+          "id": "id_19_qa5x",
+          "kind": "required",
+          "serviceId": "id_5_0sdx",
+          "instanceName": ""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "id_1_6eps",
+      "name": "MySecondApp",
+      "x": 17.1115325893079,
+      "y": 514.2027907193102,
+      "ports": [
+        {
+          "id": "id_2_twwe",
+          "kind": "required",
+          "serviceId": "id_4_20wl",
+          "instanceName": ""
+        },
+        {
+          "id": "id_3_fbis",
+          "kind": "provided",
+          "serviceId": "id_5_0sdx",
+          "instanceName": ""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "id_4_2bgm",
+      "name": "MyThirdApp",
+      "x": 491.8087418190478,
+      "y": 280.9509161600686,
+      "ports": [
+        {
+          "id": "id_5_41c8",
+          "kind": "required",
+          "serviceId": "id_4_20wl",
+          "instanceName": ""
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "services": [
+    {
+      "id": "id_4_20wl",
+      "name": "MyService1",
+      "methods": [
+        {
+          "id": "id_6_th66",
+          "name": "MyFirstMethod",
+          "fireAndForget": false,
+          "inArgs": [
+            {
+              "id": "id_8_ofu7",
+              "name": "in1",
+              "type": "uint32_t",
+              "isArray": false
+            }
+          ],
+          "outArgs": [
+            {
+              "id": "id_9_tuy0",
+              "name": "out1",
+              "type": "uint32_t",
+              "isArray": false
+            }
+          ],
+          "description": "Modifies Input and returns result"
+        }
+      ],
+      "events": [
+        {
+          "id": "id_7_1lwf",
+          "name": "MyFirstEvent",
+          "type": "bool",
+          "isArray": false,
+          "description": ""
+        }
+      ],
+      "fields": [
+        {
+          "id": "id_20_g2to",
+          "name": "MyFirstField",
+          "type": "String",
+          "isArray": false,
+          "getter": true,
+          "setter": true,
+          "notifier": true,
+          "description": "GEM-YYYYY"
+        },
+        {
+          "id": "id_4_h5zk",
+          "name": "MyThirdField",
+          "type": "uint32_t",
+          "isArray": false,
+          "getter": true,
+          "setter": true,
+          "notifier": false,
+          "description": ""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "id_5_0sdx",
+      "name": "MyService2",
+      "methods": [
+        {
+          "id": "id_14_bghm",
+          "name": "MySecondMethode",
+          "fireAndForget": false,
+          "inArgs": [
+            {
+              "id": "id_15_gf2p",
+              "name": "in2",
+              "type": "MyEnum",
+              "isArray": false
+            }
+          ],
+          "outArgs": [
+            {
+              "id": "id_16_bq1x",
+              "name": "out2",
+              "type": "bool",
+              "isArray": false
+            }
+          ],
+          "description": ""
+        }
+      ],
+      "events": [],
+      "fields": [
+        {
+          "id": "id_17_lzw3",
+          "name": "MySecondField",
+          "type": "MyEnum",
+          "isArray": false,
+          "getter": true,
+          "setter": true,
+          "notifier": false,
+          "description": ""
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "customTypes": [
+    {
+      "id": "id_10_few9",
+      "name": "MyEnum",
+      "kind": "Enum",
+      "literals": [
+        {
+          "id": "id_11_8j47",
+          "name": "VALUE_0",
+          "value": 0
+        },
+        {
+          "id": "id_12_pcbg",
+          "name": "VALUE_1",
+          "value": 1
+        },
+        {
+          "id": "id_13_rxmc",
+          "name": "VALUE_2",
+          "value": 2
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "connections": [
+    {
+      "id": "auto_id_2_nj8g_id_18_k863__id_1_6eps_id_2_twwe",
+      "fromSwcId": "id_2_nj8g",
+      "fromPortId": "id_18_k863",
+      "toSwcId": "id_1_6eps",
+      "toPortId": "id_2_twwe"
+    },
+    {
+      "id": "auto_id_2_nj8g_id_18_k863__id_4_2bgm_id_5_41c8",
+      "fromSwcId": "id_2_nj8g",
+      "fromPortId": "id_18_k863",
+      "toSwcId": "id_4_2bgm",
+      "toPortId": "id_5_41c8"
+    },
+    {
+      "id": "auto_id_1_6eps_id_3_fbis__id_2_nj8g_id_19_qa5x",
+      "fromSwcId": "id_1_6eps",
+      "fromPortId": "id_3_fbis",
+      "toSwcId": "id_2_nj8g",
+      "toPortId": "id_19_qa5x"
+    }
+  ]
+}
